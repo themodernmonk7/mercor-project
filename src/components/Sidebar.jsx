@@ -21,69 +21,85 @@ const projectsItems = [
 const Sidebar = () => {
   return (
     <>
-    <section className=" px-5  ">
-      {/* Logo */}
-      <div className=" flex justify-between py-8 border-b ">
-        <div className=" flex justify-between items-center space-x-4 ">
-        <Colorfilter size="32" variant="Bulk" color="#5030E5" />
-        <h1 className=" font-semibold text-xl ">Porject M.</h1>
-        </div>
-        <button className=" flex justify-center items-center relative ">
-          <span className=" absolute -left-2 top-[6px] ">
-        <ArrowLeft2 size={20} />
-          </span>
-        <span className=" ">
-        <ArrowLeft2 size={20}  />
-        </span>
-        </button>
-      </div>
-      <div className="  my-5 ">
-        {links.map((link) => {
-          const {id, text, icon} = link
-          return (
-            <div key={id} className=" ">
-            <Link key={id} className=" flex items-center py-3 space-x-4 text-grayColor "  >
-              <span className=" font-medium " >{icon}</span>
-              <span className=" font-medium " >{text}</span>
-            </Link>
-            </div>
-          )
-        })}
-      </div>
-      <hr className="bg-[#DBDBDB]"  />
-      <div className=" my-5 ">
-        <div className=" flex justify-between items-center font-bold text-xs text-grayColor ">
-          <p className=" uppercase ">My Projects</p>
-          <button className="">
-          <AddSquare className=" w-5 h-5 " />
+      <section className=" sticky top-0 h-screen px-5 ">
+        {/* Logo */}
+        <div className=" flex justify-between border-b py-7 ">
+          <div className=" flex items-center justify-between space-x-4 ">
+            <Colorfilter size="32" variant="Bulk" color="#5030E5" />
+            <h1 className=" text-xl font-semibold ">Project M.</h1>
+          </div>
+          <button className=" relative flex items-center justify-center ">
+            <span className=" absolute -left-2 top-[6px] ">
+              <ArrowLeft2 size={20} />
+            </span>
+            <span className=" ">
+              <ArrowLeft2 size={20} />
+            </span>
           </button>
         </div>
-        <div className="">
-          {projectsItems.map((item) => {
-            const {id, text, color} = item
-            console.log(color);
+        <div className="  my-5 ">
+          {links.map((link) => {
+            const { id, text, icon } = link
             return (
-              <NavLink key={id} className='flex items-center space-x-4 my-5 py-2 first:text-[#0D062D] first:font-semibold font-medium text-grayColor first:bg-[#5030E514] rounded-md '   end >
-                <span style={{ backgroundColor: `${color}` }} className={`w-2 h-2 rounded-full`} ></span>
-                <p className=" capitalize" >{text}</p>
-              </NavLink>
+              <div key={id} className=" ">
+                <Link
+                  key={id}
+                  className=" flex items-center space-x-4 py-3 text-grayColor "
+                >
+                  <span className=" font-medium ">{icon}</span>
+                  <span className=" font-medium ">{text}</span>
+                </Link>
+              </div>
             )
           })}
         </div>
-      </div>
-      <div className=" bg-[#5030E514] mt-20 rounded-2xl relative  ">
-        <div className=" absolute -top-12 inset-x-0 flex justify-center items-center ">
-          <div className=" bg-blue-200 rounded-full w-16 h-16 flex justify-center items-center  ">
-        <LampOn variant="Bulk" size="32" color="#FBCB18" className=" "  />
+        <hr className="bg-[#DBDBDB]" />
+        <div className=" my-5 ">
+          <div className=" flex items-center justify-between text-xs font-bold text-grayColor ">
+            <p className=" uppercase ">My Projects</p>
+            <button className="">
+              <AddSquare className=" h-5 w-5 " />
+            </button>
+          </div>
+          <div className="">
+            {projectsItems.map((item) => {
+              const { id, text, color } = item
+              return (
+                <NavLink
+                  key={id}
+                  className="my-5 flex items-center space-x-4 rounded-md py-2 font-medium text-grayColor first:bg-[#5030E514] first:font-semibold first:text-[#0D062D] "
+                  end
+                >
+                  <span
+                    style={{ backgroundColor: `${color}` }}
+                    className={`h-2 w-2 rounded-full`}
+                  ></span>
+                  <p className=" capitalize">{text}</p>
+                </NavLink>
+              )
+            })}
           </div>
         </div>
-        <div className=" flex flex-col justify-center items-center py-5 px-10 space-y-5 ">
-        <p className=" text-black font-medium mt-3 " >Thoughts Time</p>
-        <p className=" text-grayColor text-xs text-center " >We don't have any notice for you, till then you can share your thoughts with your peers.</p>
-        <button className=" bg-white text-black font-medium text-sm text-center py-3 px-6 rounded  ">Write a message</button>
+        <div className=" relative mt-20 rounded-2xl bg-[#5030E514]  ">
+          <div className=" absolute inset-x-0 -top-12 flex items-center justify-center ">
+            <div className=" flex h-16 w-16 items-center justify-center rounded-full ">
+              <div className=" z-50 bg-[#FCD64AB2] blur-md ">
+              <LampOn variant="Bulk" size="32" color="#FBCB18" className=" " />
+              </div>
+            </div>
+          </div>
+          <div className=" flex flex-col items-center justify-center space-y-5 px-10 py-5 ">
+            <p className=" mt-3 font-medium text-black ">Thoughts Time</p>
+            <p className=" text-center text-xs text-grayColor ">
+              We don't have any notice for you, till then you can share your
+              thoughts with your peers.
+            </p>
+            <button className=" rounded bg-white px-6 py-3 text-center text-sm font-medium text-black  ">
+              Write a message
+            </button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </>
   )
 }
