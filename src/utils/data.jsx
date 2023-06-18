@@ -1,6 +1,11 @@
 import React from 'react'
 import demo_1 from "../assets/demo_1.jpg"
 import demo_2 from "../assets/demo_2.jpg"
+import user2 from '../assets/user2.png'
+import user3 from '../assets/user3.png'
+import user4 from '../assets/user4.png'
+import user5 from '../assets/user5.png'
+import user6 from '../assets/user6.png'
 const data = [
   {
     id: 1,
@@ -16,7 +21,18 @@ const data = [
         description: `Brainstorming brings team members' diverse experience into play. `,
         comments: 12,
         files: 0,
-        users: 3,
+        users: [
+          {
+            image: user5
+          },
+          {
+            image: user2
+          },
+          {
+            image: user3
+          },
+          
+        ],
       },
       {
         id: 32,
@@ -26,7 +42,14 @@ const data = [
         description: `User research helps you to create an optimal product for users. `,
         comments: 10,
         files: 3,
-        users: 2,
+        users: [
+          {
+            image: user4
+          },
+          {
+            image: user6
+          },
+        ]
       },
       {
         id: 33,
@@ -36,7 +59,17 @@ const data = [
         description: `Low fidelity wireframes include the most basic content and visuals.. `,
         comments: 12,
         files: 13,
-        users: 3,
+        users: [
+          {
+            image: user5
+          },
+          {
+            image: user2
+          },
+          {
+            image: user3
+          },
+        ]
       },
     ],
   },
@@ -54,7 +87,17 @@ const data = [
         description: null,
         comments: 14,
         files: 15,
-        users: 3,
+        users: [
+          {
+            image: user3
+          },
+          {
+            image: user2
+          },
+          {
+            image: user5
+          },
+        ]
       },
       {
         id: 46,
@@ -64,7 +107,11 @@ const data = [
         description: null,
         comments: 9,
         files: 10,
-        users: 1,
+        users: [
+          {
+            image: user3
+          },
+        ]
       },
       {
         id: 47,
@@ -74,7 +121,17 @@ const data = [
         description: null,
         comments: 14,
         files: 15,
-        users: 3,
+        users: [
+          {
+            image: user5
+          },
+          {
+            image: user2
+          },
+          {
+            image: user3
+          },
+        ]
       },
     ],
   },
@@ -92,7 +149,14 @@ const data = [
         description: null,
         comments: 12,
         files: 15,
-        users: 2,
+        users: [
+          {
+            image: user6
+          },
+          {
+            image: user2
+          },
+        ]
       },
       {
         id: 74,
@@ -102,7 +166,17 @@ const data = [
         description: `It just needs to adapt the UI from what you did before `,
         comments: 12,
         files: 15,
-        users: 3,
+        users: [
+          {
+            image: user5
+          },
+          {
+            image: user2
+          },
+          {
+            image: user3
+          },
+        ]
       },
     ],
   },

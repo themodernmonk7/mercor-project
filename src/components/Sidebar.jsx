@@ -21,12 +21,12 @@ const projectsItems = [
 const Sidebar = () => {
   return (
     <>
-      <section className=" sticky top-0 h-screen px-5 ">
+      <section className=" sticky top-0 h-screen px-5 overflow-y-scroll [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']  ">
         {/* Logo */}
         <div className=" flex justify-between border-b py-7 px-5 ">
           <div className=" flex items-center justify-between space-x-4 ">
             <Colorfilter size="32" variant="Bulk" color="#5030E5" />
-            <h1 className=" text-xl font-semibold ">Project M.</h1>
+            <h1 className=" xl:text-xl lg:text-base font-semibold ">Project M.</h1>
           </div>
           <button className=" relative flex items-center justify-center ">
             <span className=" absolute -left-2 top-[6px] ">
@@ -44,7 +44,7 @@ const Sidebar = () => {
               <div key={id} className=" ">
                 <Link
                   key={id}
-                  className=" flex items-center space-x-4 py-3 text-grayColor px-5 "
+                  className=" flex items-center space-x-4 py-3 text-grayColor px-5"
                 >
                   <span className=" font-medium ">{icon}</span>
                   <span className=" font-medium ">{text}</span>
@@ -90,13 +90,13 @@ const Sidebar = () => {
               </div>
             </div>
           </div>
-          <div className=" flex flex-col items-center justify-center space-y-5 px-10 py-5 ">
+          <div className=" flex flex-col items-center justify-center space-y-5 px-10 lg:px-5 py-5 mb-20 ">
             <p className=" mt-3 font-medium text-black ">Thoughts Time</p>
             <p className=" text-center text-xs text-grayColor ">
               We don't have any notice for you, till then you can share your
               thoughts with your peers.
             </p>
-            <button className=" rounded bg-white px-6 py-3 text-center text-sm font-medium text-black  ">
+            <button className=" rounded bg-white px-6 lg:px-3 py-3 text-center text-sm font-medium text-black  ">
               Write a message
             </button>
           </div>

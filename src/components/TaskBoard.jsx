@@ -37,7 +37,7 @@ const TaskBoard = () => {
 
   return (
     <DragDropContext onDragEnd={handleDragEnd}>
-      <section className="grid grid-cols-3 gap-5">
+      <section className="grid lg:grid-cols-3 gap-5 mt-10 ">
         {boardData.map((item, sectionIndex) => {
           const { id, title: text, identityColor: markColor, tasks } = item;
           return (
@@ -78,7 +78,7 @@ const TaskBoard = () => {
                             {...provided.draggableProps}
                             {...provided.dragHandleProps}
                             ref={provided.innerRef}
-                            className={`my-5 rounded-2xl bg-white p-8   `}
+                            className={`my-5 rounded-2xl bg-white md:p-8 p-5   `}
                           >
                             <div className="flex items-center justify-between ">
                               <span
@@ -114,21 +114,16 @@ const TaskBoard = () => {
 
                             <div className="mt-10 flex items-center justify-between">
                               <div className="flex -space-x-2 overflow-hidden">
-                                <img
-                                  className="inline-block h-6 w-6 rounded-full ring-2 ring-white"
-                                  src={user5}
-                                  alt="{user.handle}"
-                                />
-                                <img
-                                  className="inline-block h-6 w-6 rounded-full ring-2 ring-white"
-                                  src={user4}
-                                  alt="{user.handle}"
-                                />
-                                <img
-                                  className="inline-block h-6 w-6 rounded-full ring-2 ring-white"
-                                  src={user3}
-                                  alt="{user.handle}"
-                                />
+                                {users.map((user, index) => {
+                                  return (
+                                    <img key={index}
+                                      className="inline-block h-6 w-6 rounded-full ring-2 ring-white"
+                                      src={user.image}
+                                      alt="profile"
+                                    />
+
+                                  )
+                                })}
                               </div>
                               <div className="flex items-center justify-center space-x-5 text-xs font-medium text-grayColor">
                                 <div className="flex items-center justify-center space-x-2">
