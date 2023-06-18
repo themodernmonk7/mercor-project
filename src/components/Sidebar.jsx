@@ -23,9 +23,10 @@ const Sidebar = () => {
     <>
     {/* This is tailwindCSS class to hide the scrollbar on sidebar 👇 */}
     {/* [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] */}
-      <section className=" sticky top-0 h-screen px-5 overflow-y-scroll [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']  ">
+      <section className=" sticky top-0 h-screen overflow-y-scroll [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']  ">
         {/* Logo */}
-        <div className=" flex justify-between border-b py-7 px-5 ">
+        <div className=" sticky top-0 border-b bg-white ">
+        <div className=" flex justify-between py-7 px-10 ">
           <div className=" flex items-center justify-between space-x-4 ">
             <Colorfilter size="32" variant="Bulk" color="#5030E5" />
             <h1 className=" xl:text-xl lg:text-base font-semibold ">Project M.</h1>
@@ -39,8 +40,10 @@ const Sidebar = () => {
             </span>
           </button>
         </div>
+        </div>
+
         {/* Menu links */}
-        <div className="  my-5 ">
+        <div className="  my-5 px-5 ">
           {links.map((link) => {
             const { id, text, icon } = link
             return (
@@ -56,9 +59,9 @@ const Sidebar = () => {
             )
           })}
         </div>
-        <hr className="bg-[#DBDBDB]" />
+        <hr className="bg-[#DBDBDB] mx-5  " />
         {/* Project links */}
-        <div className=" my-5 ">
+        <div className=" my-5 px-5 ">
           <div className=" flex items-center justify-between text-xs font-bold text-grayColor px-5 ">
             <p className=" uppercase ">My Projects</p>
             <button className="">
@@ -86,7 +89,7 @@ const Sidebar = () => {
         </div>
 
         {/* Lamp card */}
-        <div className=" relative mt-20 rounded-2xl bg-[#5030E514]  ">
+        <div className=" relative mt-20 rounded-2xl bg-[#5030E514] mx-5  ">
           <div className=" absolute inset-x-0 -top-12 flex items-center justify-center ">
             <div className=" flex h-16 w-16 items-center justify-center rounded-full bg-gray-100 backdrop-blur-xl ">
               <div className=" bg-[#FCD64AB2] rounded-full w-10 h-10 ">

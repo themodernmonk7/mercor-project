@@ -6,7 +6,7 @@ import user4 from '../assets/user4.png'
 import user5 from '../assets/user5.png'
 const Filter = () => {
   return (
-    <section className=" my-10 ">
+    <section className=" my-10 md:px-10 px-2 ">
       <div className=" flex flex-col md:flex-row md:items-center justify-between space-y-10 md:space-y-0 ">
         {/* Right */}
         <div className=" flex justify-start  space-x-5  ">

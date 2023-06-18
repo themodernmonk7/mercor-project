@@ -40,7 +40,7 @@ const TaskBoard = () => {
 
   return (
     <DragDropContext onDragEnd={handleDragEnd}>
-      <section className="grid lg:grid-cols-3 gap-5 mt-10 ">
+      <section className="grid lg:grid-cols-3 gap-5 mt-10 md:px-10 px-2 ">
         {boardData.map((item, sectionIndex) => {
           const { id, title: text, identityColor: markColor, tasks } = item;
           return (
