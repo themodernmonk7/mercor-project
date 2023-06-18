@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import user3 from '../assets/user3.png';
 import user4 from '../assets/user4.png';
 import user5 from '../assets/user5.png';
@@ -7,7 +7,19 @@ import data from '../utils/data';
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
 
 const TaskBoard = () => {
+
+  const handleDragEnd = (result) => {
+    // console.log(result);
+    const {source, destination} = result 
+    if(!destination) return 
+    if(destination.droppableId === source.droppableId && destination.index === source.index) return
+    
+
+  }
+  
   return (
+    <DragDropContext onDragEnd={handleDragEnd}>
+
     <section className="grid grid-cols-3 gap-5">
       {data.map((item) => {
         const { id, title: text, identityColor: markColor, tasks } = item;
@@ -29,8 +41,8 @@ const TaskBoard = () => {
             />
 
             {/* Card */}
-            <DragDropContext>
-              <Droppable droppableId="card">
+              {/* <Droppable droppableId="card"> */}
+              <Droppable droppableId={text}>
                 {(provided) => (
                   <section {...provided.droppableProps} ref={provided.innerRef}>
                     {tasks.map((task, index) => {
@@ -51,9 +63,9 @@ const TaskBoard = () => {
                               {...provided.draggableProps}
                               {...provided.dragHandleProps}
                               ref={provided.innerRef}
-                              className="my-5 rounded-2xl bg-white p-8"
+                              className={`my-5 rounded-2xl bg-white p-8  `}
                             >
-                              <div className="flex items-center justify-between">
+                              <div className="flex items-center justify-between ">
                                 <span
                                   className={`rounded px-2 py-1 text-xs font-medium capitalize ${
                                     priority === 'low' && 'bg-[#DFA87433] text-[#D58D49]'
@@ -123,11 +135,11 @@ const TaskBoard = () => {
                   </section>
                 )}
               </Droppable>
-            </DragDropContext>
           </div>
         );
       })}
     </section>
+      </DragDropContext>
   );
 };
 
