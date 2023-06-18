@@ -3,6 +3,11 @@ import { FolderMinus, Message } from 'iconsax-react';
 import data from '../utils/data';
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
 
+/*
+Most import thing, When you are using react-beautify-dnd package for drag and drop, then make sure to remove the <React.StrictMode> </React.StrictMode>, tag completely. 
+*/
+
+
 const TaskBoard = () => {
   const [boardData, setBoardData] = useState(data);
 
