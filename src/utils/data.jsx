@@ -1,6 +1,8 @@
 import React from 'react'
 import demo_1 from "../assets/demo_1.jpg"
 import demo_2 from "../assets/demo_2.jpg"
+import demo_3 from "../assets/demo_3.jpg"
+import demo_4 from "../assets/demo_4.jpg"
 import user2 from '../assets/user2.png'
 import user3 from '../assets/user3.png'
 import user4 from '../assets/user4.png'
@@ -83,7 +85,7 @@ const data = [
         id: 45,
         priority: "low",
         title: "Onboarding Illustrations ",
-        image: demo_1,
+        image: [demo_1],
         description: null,
         comments: 14,
         files: 15,
@@ -103,7 +105,7 @@ const data = [
         id: 46,
         priority: "low",
         title: "Moodboard",
-        image: null,
+        image: [demo_4],
         description: null,
         comments: 9,
         files: 10,
