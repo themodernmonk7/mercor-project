@@ -5,9 +5,9 @@ import avatar from '../assets/avatar.png'
 const Navbar = () => {
   return (
     <>
-      <nav className=" px5 flex items-center justify-between border-b border-b-[#DBDBDB] py-5 ">
+      <nav className=" flex items-center justify-between border-b border-b-[#DBDBDB] py-5 ">
         {/* Search box */}
-        <form action="" className=" w-1/3 ">
+        <form action="" className=" w-1/3 hidden md:block ">
           <div className=" relative flex items-center ">
             <SearchNormal1
               size={20}
@@ -21,7 +21,7 @@ const Navbar = () => {
           </div>
         </form>
 
-        <div className=" flex items-center justify-center space-x-10 ">
+        <div className=" flex md:items-center md:justify-center md:space-x-10">
           {/* Icons */}
           <div className=" flex items-center justify-center space-x-5 text-grayColor ">
             <button className="">
@@ -37,7 +37,7 @@ const Navbar = () => {
           </div>
 
           {/* user */}
-          <div className=" flex items-center justify-center space-x-5 ">
+          <div className=" flex items-center justify-center space-x-5  ">
             <div className="">
               <p className=" text-black ">Anima Agarwal</p>
               <p className=" text-right text-sm text-grayColor ">U.P, India</p>
