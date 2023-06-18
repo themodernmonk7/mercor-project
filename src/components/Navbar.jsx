@@ -36,7 +36,7 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* user */}
+          {/* User Avatar */}
           <div className=" flex items-center justify-center space-x-5  ">
             <div className="">
               <p className=" text-black ">Anima Agarwal</p>

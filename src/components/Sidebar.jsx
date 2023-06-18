@@ -37,6 +37,7 @@ const Sidebar = () => {
             </span>
           </button>
         </div>
+        {/* Menu links */}
         <div className="  my-5 ">
           {links.map((link) => {
             const { id, text, icon } = link
@@ -54,6 +55,7 @@ const Sidebar = () => {
           })}
         </div>
         <hr className="bg-[#DBDBDB]" />
+        {/* Project links */}
         <div className=" my-5 ">
           <div className=" flex items-center justify-between text-xs font-bold text-grayColor px-5 ">
             <p className=" uppercase ">My Projects</p>
@@ -80,6 +82,8 @@ const Sidebar = () => {
             })}
           </div>
         </div>
+
+        {/* Lamp card */}
         <div className=" relative mt-20 rounded-2xl bg-[#5030E514]  ">
           <div className=" absolute inset-x-0 -top-12 flex items-center justify-center ">
             <div className=" flex h-16 w-16 items-center justify-center rounded-full bg-gray-100 backdrop-blur-xl ">

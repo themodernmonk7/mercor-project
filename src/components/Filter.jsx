@@ -28,7 +28,7 @@ const Filter = () => {
             <AddSquare size={20} color="#5030E5" variant="Bulk" />
             <span className=" font-medium text-[#5030E5] ">Invite</span>
           </button>
-          {/* Users */}
+          {/* Users Profile */}
           <div className="flex -space-x-2 overflow-hidden ">
             <img
               className="inline-block md:h-10 md:w-10 h-8  w-8  rounded-full ring-2 ring-white"

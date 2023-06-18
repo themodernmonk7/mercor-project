@@ -9,6 +9,7 @@ import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
 const TaskBoard = () => {
   const [boardData, setBoardData] = useState(data);
 
+  // function to handle drag and drop
   const handleDragEnd = (result) => {
     const { source, destination } = result;
 
@@ -47,8 +48,10 @@ const TaskBoard = () => {
                   style={{ backgroundColor: `${markColor}` }}
                   className={`h-2 w-2 rounded-full`}
                 ></span>
+                {/* Board title */}
                 <p className="font-medium capitalize text-blackColor">{text}</p>
                 <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#E0E0E0] text-xs font-medium">
+                  {/* Total task */}
                   {tasks.length}
                 </span>
               </div>
@@ -57,6 +60,7 @@ const TaskBoard = () => {
                 className={`mt-5 border-2 border-[#${markColor}]`}
               />
 
+{/* Task card */}
               <Droppable droppableId={sectionIndex.toString()}>
                 {(provided) => (
                   <section {...provided.droppableProps} ref={provided.innerRef}>
@@ -81,6 +85,7 @@ const TaskBoard = () => {
                             className={`my-5 rounded-2xl bg-white md:p-8 p-5   `}
                           >
                             <div className="flex items-center justify-between ">
+                              {/* Priority: Low, High, Completed */}
                               <span
                                 className={`rounded px-2 py-1 text-xs font-medium capitalize ${
                                   priority === 'low' && 'bg-[#DFA87433] text-[#D58D49]'
@@ -90,7 +95,9 @@ const TaskBoard = () => {
                               </span>
                               <button className="text-2xl">...</button>
                             </div>
+                            {/* Task Card title */}
                             <h3 className="mt-2 text-lg font-semibold text-blackColor">{title}</h3>
+                            {/* Card image */}
                             {image && (
                               <div className="mt-5">
                                 <img
@@ -102,6 +109,7 @@ const TaskBoard = () => {
                                 />
                               </div>
                             )}
+                            {/* Card description */}
                             {description && (
                               <p
                                 className={`mt-2 ${
@@ -112,6 +120,7 @@ const TaskBoard = () => {
                               </p>
                             )}
 
+{/* Users image */}
                             <div className="mt-10 flex items-center justify-between">
                               <div className="flex -space-x-2 overflow-hidden">
                                 {users.map((user, index) => {
@@ -125,6 +134,8 @@ const TaskBoard = () => {
                                   )
                                 })}
                               </div>
+
+                              {/* Comments and Files */}
                               <div className="flex items-center justify-center space-x-5 text-xs font-medium text-grayColor">
                                 <div className="flex items-center justify-center space-x-2">
                                   <Message />
