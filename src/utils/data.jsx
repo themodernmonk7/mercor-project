@@ -9,7 +9,7 @@ const data = [
     count: 4,
     tasks: [
       {
-        id: 1,
+        id: 31,
         priority: "low",
         title: "Brainstorming",
         image: null,
@@ -19,7 +19,7 @@ const data = [
         users: 3,
       },
       {
-        id: 2,
+        id: 32,
         priority: "high",
         title: "Research",
         image: null,
@@ -29,7 +29,7 @@ const data = [
         users: 2,
       },
       {
-        id: 3,
+        id: 33,
         priority: "high",
         title: "Wireframes",
         image: null,
@@ -47,7 +47,7 @@ const data = [
     count: 3,
     tasks: [
       {
-        id: 1,
+        id: 45,
         priority: "low",
         title: "Onboarding Illustrations ",
         image: demo_1,
@@ -57,7 +57,7 @@ const data = [
         users: 3,
       },
       {
-        id: 2,
+        id: 46,
         priority: "low",
         title: "Moodboard",
         image: null,
@@ -67,7 +67,7 @@ const data = [
         users: 1,
       },
       {
-        id: 3,
+        id: 47,
         priority: "high",
         title: "Onboarding Illustrations ",
         image: null,
@@ -85,7 +85,7 @@ const data = [
     count: 2,
     tasks: [
       {
-        id: 1,
+        id: 73,
         priority: "completed",
         title: "Mobile App Design",
         image: demo_2,
@@ -95,7 +95,7 @@ const data = [
         users: 2,
       },
       {
-        id: 2,
+        id: 74,
         priority: "completed",
         title: "Design System",
         image: null,
