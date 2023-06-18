@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import user3 from '../assets/user3.png'
 import user4 from '../assets/user4.png'
 import user5 from '../assets/user5.png'
@@ -10,7 +10,7 @@ const TaskBoard = () => {
   return (
     <section className=" grid grid-cols-3 gap-5  ">
       {data.map((item) => {
-        const { id, title: text, identityColor: markColor, count, tasks } = item
+        const { id, title: text, identityColor: markColor, tasks } = item
         return (
           <div key={id} className=" rounded-2xl bg-[#F5F5F5] p-5  ">
             <div className=" flex items-center space-x-2  ">
@@ -22,7 +22,6 @@ const TaskBoard = () => {
               <span className=" flex h-5 w-5 items-center justify-center rounded-full bg-[#E0E0E0] text-xs font-medium ">
                 {" "}
                 {tasks.length}
-                {/* {count}{" "} */}
               </span>
             </div>
             <hr
@@ -42,10 +41,11 @@ const TaskBoard = () => {
                 comments,
                 users,
               } = task
-              return (
-                <article key={id} className=" my-5 rounded-2xl bg-white p-8 ">
+              return ( 
+                <article key={id}  className=" my-5 rounded-2xl bg-white p-8 cursor-move"
+                  >
                   <div className=" flex items-center justify-between ">
-                    <span className={`rounded bg-[#DFA87433] px-2 py-1 text-xs font-medium capitalize text-[#D58D49] ${priority === 'completed' && "bg-[#83C29D33] text-[#68B266] " } ${priority === 'high' && "bg-[#D8727D1A] text-[#D8727D] " } `}>
+                    <span className={`rounded   px-2 py-1 text-xs font-medium capitalize ${priority === 'low' && 'bg-[#DFA87433] text-[#D58D49] '}  ${priority === 'completed' && "bg-[#83C29D33] text-[#68B266] " } ${priority === 'high' && "bg-[#D8727D1A] text-[#D8727D] " }`}>
                       {priority}
                     </span>
                     <button className=" text-2xl ">...</button>
@@ -64,7 +64,7 @@ const TaskBoard = () => {
                     </div>
                   )} 
                   {description &&
-                  <p className={`mt-2 text-grayColor ${priority === 'completed' && 'text-black'} `}>{description}</p>
+                  <p className={`mt-2  ${priority === 'completed' ? 'text-[#0D062D' : 'text-grayColor' } `}>{description}</p>
                   }
  
                   <div className=" mt-10 flex items-center justify-between ">
@@ -97,6 +97,7 @@ const TaskBoard = () => {
                     </div>
                   </div>
                 </article>
+
               )
             })}
           </div>
