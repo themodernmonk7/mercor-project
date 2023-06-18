@@ -82,9 +82,11 @@ const Sidebar = () => {
         </div>
         <div className=" relative mt-20 rounded-2xl bg-[#5030E514]  ">
           <div className=" absolute inset-x-0 -top-12 flex items-center justify-center ">
-            <div className=" flex h-16 w-16 items-center justify-center rounded-full ">
-              <div className=" z-50 bg-[#FCD64AB2] blur-md ">
-              <LampOn variant="Bulk" size="32" color="#FBCB18" className=" " />
+            <div className=" flex h-16 w-16 items-center justify-center rounded-full bg-gray-100 backdrop-blur-xl ">
+              <div className=" bg-[#FCD64AB2] rounded-full w-10 h-10 ">
+              <div className=" absolute flex justify-center items-center backdrop-blur-md w-16 h-16 top-0 right-0 left-0 rounded-full ">
+              <LampOn variant="Bulk" size="34" color="#FBCB18"/>
+              </div>
               </div>
             </div>
           </div>
