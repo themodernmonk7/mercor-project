@@ -23,7 +23,7 @@ const Sidebar = () => {
     <>
       <section className=" sticky top-0 h-screen px-5 ">
         {/* Logo */}
-        <div className=" flex justify-between border-b py-7 ">
+        <div className=" flex justify-between border-b py-7 px-5 ">
           <div className=" flex items-center justify-between space-x-4 ">
             <Colorfilter size="32" variant="Bulk" color="#5030E5" />
             <h1 className=" text-xl font-semibold ">Project M.</h1>
@@ -44,7 +44,7 @@ const Sidebar = () => {
               <div key={id} className=" ">
                 <Link
                   key={id}
-                  className=" flex items-center space-x-4 py-3 text-grayColor "
+                  className=" flex items-center space-x-4 py-3 text-grayColor px-5 "
                 >
                   <span className=" font-medium ">{icon}</span>
                   <span className=" font-medium ">{text}</span>
@@ -55,7 +55,7 @@ const Sidebar = () => {
         </div>
         <hr className="bg-[#DBDBDB]" />
         <div className=" my-5 ">
-          <div className=" flex items-center justify-between text-xs font-bold text-grayColor ">
+          <div className=" flex items-center justify-between text-xs font-bold text-grayColor px-5 ">
             <p className=" uppercase ">My Projects</p>
             <button className="">
               <AddSquare className=" h-5 w-5 " />
@@ -67,12 +67,12 @@ const Sidebar = () => {
               return (
                 <NavLink
                   key={id}
-                  className="my-5 flex items-center space-x-4 rounded-md py-2 font-medium text-grayColor first:bg-[#5030E514] first:font-semibold first:text-[#0D062D] "
+                  className="my-5 flex items-center space-x-4 rounded-md py-2 font-medium text-grayColor first:bg-[#5030E514] first:font-semibold first:text-[#0D062D] overflow-visible px-5 "
                   end
                 >
                   <span
                     style={{ backgroundColor: `${color}` }}
-                    className={`h-2 w-2 rounded-full`}
+                    className={`h-2 w-2 rounded-full `}
                   ></span>
                   <p className=" capitalize">{text}</p>
                 </NavLink>
