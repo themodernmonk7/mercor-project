@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import user3 from '../assets/user3.png';
-import user4 from '../assets/user4.png';
-import user5 from '../assets/user5.png';
 import { FolderMinus, Message } from 'iconsax-react';
 import data from '../utils/data';
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
