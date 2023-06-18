@@ -5,7 +5,7 @@ import avatar from '../assets/avatar.png'
 const Navbar = () => {
   return (
     <>
-      <nav className=" flex items-center justify-between border-b border-b-[#DBDBDB] py-5 ">
+      <nav className="flex flex-col md:flex-row md:items-center justify-between border-b border-b-[#DBDBDB] py-5">
         {/* Search box */}
         <form action="" className=" w-1/3 hidden md:block ">
           <div className=" relative flex items-center ">
@@ -21,7 +21,7 @@ const Navbar = () => {
           </div>
         </form>
 
-        <div className=" flex md:items-center md:justify-center md:space-x-10">
+        <div className=" flex md:items-center md:justify-center justify-between md:space-x-10 ">
           {/* Icons */}
           <div className=" flex items-center justify-center space-x-5 text-grayColor ">
             <button className="">
