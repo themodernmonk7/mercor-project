@@ -21,6 +21,8 @@ const projectsItems = [
 const Sidebar = () => {
   return (
     <>
+    {/* This is tailwindCSS class to hide the scrollbar on sidebar 👇 */}
+    {/* [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] */}
       <section className=" sticky top-0 h-screen px-5 overflow-y-scroll [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']  ">
         {/* Logo */}
         <div className=" flex justify-between border-b py-7 px-5 ">
